@@ -69,11 +69,11 @@ btn_delete.addEventListener("click", () => {
   //Evento che gestisce il click del bottone "annulla"
 
   full_name_field.value = "";
-  km_field = 0;
-  age_field = "Minorenne";
+  km_field.value = 0;
+  age_field.value = "Minorenne";
   //Reset dei "value" acquisiti nel form
 
-  td_nome.innerTextt = "";
+  td_nome.innerText = "";
   td_offerta.innerText = "";
   td_carrozza.innerText = "";
   td_codice.innerText = "";
