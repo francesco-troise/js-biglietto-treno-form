@@ -20,6 +20,27 @@ function randomNumber(min , max){
 }
 
 form.addEventListener("submit", function(event){
+//In ascolto per l'evento -submit del -form
     event.preventDefault()
-    
+    //prevengo comportamento di default e quindi conseguenziale perdita dati javascript
+
+    const nome = full_name_field.value
+    const km = km_field.value
+    const age = age_field.value
+    //Variabili intermedie per poter usare i valori presi dai rispettivi nodi
+
+    const prezzo_base = 0.21 * km
+    let sconto = 0
+    let offerta = "Biglietto Standard"
+
+    if(age === "Minorenne"){
+        sconto = 0.2
+        offerta = "Promozione Minorenne( -20% )"
+    } else if(age === "Over 65"){
+        sconto = 0.4
+        offerta = "Promozione over 65( -40% )"
+    }
+
+    const costo_finale = (prezzo_base * (1 - sconto)).toFixed(2)
+    //calcola il costo finale del biglietto intercettando lo sconto apposito
 })
