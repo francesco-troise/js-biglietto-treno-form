@@ -19,34 +19,63 @@
     <main>
         <div class="container">
             <h1 class="text-center text-white my-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-            <div class="card card-form bg-white rounded-3 p-4">
-                <form class="text-center">
-                    <div class="row">
-                        <div class="col-4 text-start">
-                            <label class="form-label text-danger fw-bold" for="input_full_name">Nome e Cognome</label>
-                            <input class="form-control w-75 fw-bold border-danger" type="text" id="input_full_name" placeholder="Inserire nome e cognome" required>
+            <div class="card card-form bg-white rounded-3 p-4 shadow">
+                <div class="card-body">
+                    <form class="text-center">
+                        <div class="row">
+                            <div class="col-4 text-start">
+                                <label class="form-label text-danger fw-bold" for="input_full_name">Nome e
+                                    Cognome</label>
+                                <input class="form-control w-75 fw-bold border-danger" type="text" id="input_full_name"
+                                    placeholder="Inserire nome e cognome" required>
+                            </div>
+                            <div class="col-4 text-start">
+                                <label class="form-label text-danger fw-bold" for="input-km">Km da percorrere</label>
+                                <input class="form-control w-75 fw-bold border-danger" type="number" id="input-km"
+                                    placeholder="Distanza in km" required min="1" max="99">
+                            </div>
+                            <div class="col-4 text-start">
+                                <label class="form-label text-danger fw-bold">Fascia d'età</label>
+                                <select class="form-select w-75 fw-bold border-danger" id="select-age">
+                                    <option value="Minorenne" class="fw-bold">Minorenne</option>
+                                    <option value="Maggiorenne" class="fw-bold">Maggiorenne</option>
+                                    <option value="Over65" class="fw-bold">Over 65</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-4 text-start">
-                            <label class="form-label text-danger fw-bold" for="input-km">Km da percorrere</label>
-                            <input class="form-control w-75 fw-bold border-danger" type="number" id="input-km" placeholder="Distanza in km" required min="1" max="99">
+                        <div class="mt-5">
+                            <button type="submit" id="btn-submit">Genera</button>
+                            <button type="button" id="btn-delete">Annulla</button>
                         </div>
-                        <div class="col-4 text-start">
-                            <label class="form-label text-danger fw-bold">Fascia d'età</label>
-                            <select class="form-select w-75 fw-bold border-danger" id=" select-age">
-                                <option value="Minorenne" class="fw-bold">Minorenne</option>
-                                <option value="Maggiorenne" class="fw-bold">Maggiorenne</option>
-                                <option value="Over65" class="fw-bold">Over 65</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mt-5">
-                        <button type="submit" id="btn-submit">Genera</button>
-                        <button type="button" id="btn-delete">Annulla</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-            <h2></h2>
-            <div></div>
+
+            <h2 class="h1 fw-bold mt-4 text-white text-center ">IL TUO BIGLIETTO</h2>
+            <div class="bg-white rounded-0 p-4">
+                <h3 class="h4 fw-bold">DETTAGLIO PASSEGGERO</h1>
+                    <table class="table table-borderless border-top border-bottom">
+                        <thead>
+                            <tr class="text-center">
+                                <th class="bg-secondary text-center" scope="col">NOME PASSEGGERO</th>
+                                <th scope="col">Offerta</th>
+                                <th scope="col">Carrozza</th>
+                                <th scope="col">Codice CP</th>
+                                <th scope="col">Costo biglietto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="td-nome"></td>
+                                <td id="td-offerta"></td>
+                                <td id="td-carrozza"></td>
+                                <td id="td-codice"></td>
+                                <td id="td-costo"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
         </div>
     </main>
     <footer></footer>
