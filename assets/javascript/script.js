@@ -48,4 +48,16 @@ form.addEventListener("submit", function(event){
     //Numero casuale per il numero della carrozza
     const codice_cp = randomNumber(10000, 99999)
     //Numero casuale per il codice del biglietto
+
+    td_nome.textContent = nome
+/*
+    td_nome è il nodo che identifica la cella della tabella dove inserire il nome del passeggero.
+    La variabile -nome- salva il se il valore(value) passatogli da  -full_name_field.value-
+    -full_name_field è il nodo che raffigura il campo di input dove l'utente scriverà, quindi avrà un "value" da passare
+*/
+    td_offerta.textContent = offerta
+    td_carrozza.textContent = carrozza
+    td_codice.textContent = codice_cp
+    td_costo.textContent = costo_finale
+    //Si procede ad inserire nelle celle della tabelle i valori corrispondenti
 })
