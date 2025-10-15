@@ -22,7 +22,7 @@ function randomNumber(min , max){
 form.addEventListener("submit", function(event){
 //In ascolto per l'evento -submit del -form
     event.preventDefault()
-    //prevengo comportamento di default e quindi conseguenziale perdita dati javascript
+    //Prevengo comportamento di default e quindi conseguenziale perdita dati javascript
 
     const nome = full_name_field.value
     const km = km_field.value
@@ -42,5 +42,10 @@ form.addEventListener("submit", function(event){
     }
 
     const costo_finale = (prezzo_base * (1 - sconto)).toFixed(2)
-    //calcola il costo finale del biglietto intercettando lo sconto apposito
+    //Calcola il costo finale del biglietto intercettando lo sconto apposito
+
+    const carrozza = randomNumber(1, 12)
+    //Numero casuale per il numero della carrozza
+    const codice_cp = randomNumber(10000, 99999)
+    //Numero casuale per il codice del biglietto
 })
