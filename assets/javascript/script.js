@@ -14,3 +14,8 @@ const td_codice = document.getElementById("td-codice")
 const td_costo = document.getElementById("td-costo")
 //Selezione dei nodi appartenenti alla tabella di riepilogo del biglietto
 
+function randomNumber(min , max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    //A seconda dell'intervallo impostato, ritorna un numero casuale(per codice biglietto e numero della carrozza)
+}
+
