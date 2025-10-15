@@ -19,3 +19,7 @@ function randomNumber(min , max){
     //A seconda dell'intervallo impostato, ritorna un numero casuale(per codice biglietto e numero della carrozza)
 }
 
+form.addEventListener("submit", function(event){
+    event.preventDefault()
+    
+})
